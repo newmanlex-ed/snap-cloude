@@ -1,0 +1,15 @@
+{
+  "name": "snap-student-screener",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A poverty-informed SNAP eligibility screener for college students.",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "test": "npm test -w server",
+    "audit:states": "node server/scripts/audit-states.js"
+  },
+  "devDependencies": { "concurrently": "^9.0.0" }
+}
