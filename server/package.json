@@ -1,0 +1,12 @@
+{
+  "name": "snap-screener-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "node --test test/engine.test.js"
+  },
+  "dependencies": { "express": "^4.21.0" }
+}
